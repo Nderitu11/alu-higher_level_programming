@@ -1,2 +1,2 @@
 #!/bin/bash
-python3 -c 'import os,py_compile; p=os.environ["PYFILE"]; py_compile.compile(p,cfile=p+"c"); print("Compiling "+p+" ...")'
+python3 -m compileall -b "$PYFILE"
