@@ -1,15 +1,11 @@
-# Python - Classes and Objects
+# Python - Everything is object
 
-Introduction to object-oriented programming in Python 3. Each file builds
-on the previous one to define a `Square` class: private attributes,
-validation, methods, properties (getters/setters) and a position.
+Questions and exercises about how Python handles objects: type and id,
+mutable vs immutable objects, aliases, and how arguments are passed to
+functions.
 
 | File | Description |
 |------|-------------|
-| 0-square.py | Empty class Square |
-| 1-square.py | Square with a private size |
-| 2-square.py | Size validation |
-| 3-square.py | Area of a square |
-| 4-square.py | Property getter and setter for size |
-| 5-square.py | Printing a square with # |
-| 6-square.py | Position of a square |
+| 0-answer.txt to 18-answer.txt | Answers about type, id, identity, equality and mutability |
+| 19-copy_list.py | Function that returns a copy of a list |
+| 20-answer.txt to 28-answer.txt | Answers about tuples and id after list operations |
