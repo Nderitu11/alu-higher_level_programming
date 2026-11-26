@@ -1,0 +1,81 @@
+================================
+How to use 5-text_indentation.py
+================================
+
+This module defines text_indentation(text). Nothing is printed after
+the last character, so each example is followed by print("").
+
+::
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Normal use:
+
+    >>> text_indentation("Hello. World"); print("")
+    Hello.
+    <BLANKLINE>
+    World
+
+All three delimiters:
+
+    >>> text_indentation("a? b: c. d"); print("")
+    a?
+    <BLANKLINE>
+    b:
+    <BLANKLINE>
+    c.
+    <BLANKLINE>
+    d
+
+Spaces around lines are removed:
+
+    >>> text_indentation("  Hi  .   There  "); print("")
+    Hi  .
+    <BLANKLINE>
+    There
+
+Delimiter at the end of the text:
+
+    >>> text_indentation("Hi."); print("")
+    Hi.
+    <BLANKLINE>
+    <BLANKLINE>
+
+Consecutive delimiters:
+
+    >>> text_indentation("Wait.. what?"); print("")
+    Wait.
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    what?
+    <BLANKLINE>
+    <BLANKLINE>
+
+No delimiter:
+
+    >>> text_indentation("No delimiter here"); print("")
+    No delimiter here
+
+Empty string:
+
+    >>> text_indentation(""); print("")
+    <BLANKLINE>
+
+Invalid text:
+
+    >>> text_indentation(5)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+    >>> text_indentation(["a."])
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+Missing argument:
+
+    >>> text_indentation()
+    Traceback (most recent call last):
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
