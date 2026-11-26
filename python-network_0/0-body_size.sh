@@ -1,3 +1,3 @@
 #!/bin/bash
-# Displays the size in bytes of the body of the response for a given URL
-curl -sL "$1" | wc -c
+# Send a request and display the response body size in bytes
+curl -s "$1" | wc -c
