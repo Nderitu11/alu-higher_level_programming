@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Fetches https://alu-intranet.hbtn.io/status using the urllib package."""
+"""Fetches https://alu-intranet.hbtn.io/status using urllib."""
 import urllib.request
 
 
@@ -8,6 +8,6 @@ if __name__ == "__main__":
     with urllib.request.urlopen(url) as response:
         body = response.read()
         print("Body response:")
-        print("\t- type: {}".format(type(body)))
-        print("\t- content: {}".format(body))
-        print("\t- utf8 content: {}".format(body.decode("utf-8")))
+        print("\ttype: {}".format(type(body)))
+        print("\tcontent: {}".format(body))
+        print("\tutf8 content: {}".format(body.decode("utf-8")))
