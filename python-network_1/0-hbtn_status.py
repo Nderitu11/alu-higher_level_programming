@@ -1,12 +1,11 @@
 #!/usr/bin/python3
-"""Fetches https://alu-intranet.hbtn.io/status using urllib."""
+"""Fetches https://alu-intranet.hbtn.io/status and displays the body."""
 import urllib.request
 
 
 if __name__ == "__main__":
-    url = "https://alu-intranet.hbtn.io/status"
-    with urllib.request.urlopen(url) as response:
-        body = response.read()
+    with urllib.request.urlopen("https://alu-intranet.hbtn.io/status") as resp:
+        body = resp.read()
         print("Body response:")
         print("\ttype: {}".format(type(body)))
         print("\tcontent: {}".format(body))
